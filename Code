@@ -1,21 +1,21 @@
 #Python code 
 
-def calculate_simple_interest(principal, rate, time):
+def simple_interest(principal, rate, time):
     interest = (principal * rate * time) / 100
     return interest
 
 def main():
     principal = float(input("Enter the principal amount: "))
     gender = input("Enter the gender (M/F): ").upper()
-    is_senior_citizen = input("Are you a senior citizen? (Y/N): ").upper()
+    senior_citizen = input("Are you a senior citizen? (Y/N): ").upper()
 
-    if gender == "M" and is_senior_citizen == "Y":
+    if gender == "M" and senior_citizen == "Y":
         rate = 7
-    elif gender == "M" and is_senior_citizen == "N":
+    elif gender == "M" and senior_citizen == "N":
         rate = 5
-    elif gender == "F" and is_senior_citizen == "Y":
+    elif gender == "F" and senior_citizen == "Y":
         rate = 8
-    elif gender == "F" and is_senior_citizen == "N":
+    elif gender == "F" and senior_citizen == "N":
         rate = 6
     else:
         print("Invalid input.")
@@ -23,7 +23,7 @@ def main():
 
     time = float(input("Enter the time period (in years): "))
 
-    interest = calculate_simple_interest(principal, rate, time)
+    interest = simple_interest(principal, rate, time)
     total_amount = principal + interest
 
     print("\nSimple Interest:",interest)
