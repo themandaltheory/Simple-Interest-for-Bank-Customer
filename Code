@@ -26,8 +26,8 @@ def main():
     interest = calculate_simple_interest(principal, rate, time)
     total_amount = principal + interest
 
-    print("\nSimple Interest: {:.2f}".format(interest))
-    print("Total amount: {:.2f}".format(total_amount))
+    print("\nSimple Interest:",interest)
+    print("Total amount:",total_amount)
 
 if __name__ == "__main__":
     main()
